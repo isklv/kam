@@ -45,18 +45,18 @@ jobs:
 
           changed=0
 
-          if [ ! -f file1.txt ] || ! cmp -s tmp_downloads/xbssfwf0vy.engine.js xbssfwf0vy.engine.js; then
+          if [ ! -f xbssfwf0vy.engine.js ] || ! cmp -s tmp_downloads/xbssfwf0vy.engine.js xbssfwf0vy.engine.js; then
             cp tmp_downloads/xbssfwf0vy.engine.js xbssfwf0vy.engine.js
             changed=1
           fi
 
-          if [ ! -f file2.txt ] || ! cmp -s tmp_downloads/5hxvxemsh6.engine.js 5hxvxemsh6.engine.js; then
+          if [ ! -f 5hxvxemsh6.engine.js ] || ! cmp -s tmp_downloads/5hxvxemsh6.engine.js 5hxvxemsh6.engine.js; then
             cp tmp_downloads/5hxvxemsh6.engine.js 5hxvxemsh6.engine.js
             changed=1
           fi
 
           if [ "$changed" -eq 1 ]; then
-            git add file1.txt 5hxvxemsh6.engine.js
+            git add xbssfwf0vy.engine.js 5hxvxemsh6.engine.js
             git commit -m "Update files from example.com"
             git push
           else
