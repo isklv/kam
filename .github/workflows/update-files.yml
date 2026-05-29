@@ -3,6 +3,7 @@ name: Update files from kameleoon
 on:
   schedule:
     - cron: "*/10 * * * *"
+      timezone: "Europe/Moscow"
   workflow_dispatch:
 
 permissions:
