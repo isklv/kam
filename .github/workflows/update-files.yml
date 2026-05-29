@@ -1,4 +1,4 @@
-name: Update files from example.com
+name: Update files from kameleoon
 
 on:
   schedule:
